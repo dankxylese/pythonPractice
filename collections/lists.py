@@ -33,4 +33,3 @@ x = table.get("brand") # allows optional return in key not found
 y = table["brand"]
 
 print(table.get("models").get("1"))
-
