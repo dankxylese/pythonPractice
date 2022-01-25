@@ -16,7 +16,7 @@ while True:
     if i0 == "custom":
         while True:
             i1 = input("Specify starting range (leave blank for 1): ")
-            if i1.isnumeric() and int(i1) > 0:  # check for it to be numerical (which removes float) and more than 0.
+            if i1.isdigit() and int(i1) > 0:  # check for it to be a digit (which removes float) and more than 0.
                 rLow = int(i1)  # Save
                 break
             elif not i1:  # If left black, use default value
@@ -26,7 +26,7 @@ while True:
 
         while True:
             i2 = input("Specify ending range (leave blank for 100): ")
-            if i2.isnumeric() and int(i2) > 0:
+            if i2.isdigit() and int(i2) > 0:
                 rHigh = int(i2)
                 break
             elif not i2:
@@ -68,7 +68,7 @@ while True:
                 while True:
                     i7 = input("Specify new divisor to replace dividend with word "
                                + i6 + " (has to be more than 1): ")
-                    if i7.isnumeric() and int(i7) > 1:
+                    if i7.isdigit() and int(i7) > 1:
                         newDivisor = int(i7)  # Save the new divisor
                         break
                     else:
