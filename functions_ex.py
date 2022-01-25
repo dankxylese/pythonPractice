@@ -111,7 +111,7 @@ print("\nQ3b\n")
 # A3b:
 def prime_finder(user_input):  # can be int or str
     if str(user_input).isdigit():
-        if prime_finder_helper1(int(user_input)):
+        if prime_finder_helper(int(user_input)):
             return True
         else:
             return False
