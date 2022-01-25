@@ -59,8 +59,8 @@ names = ["Alan Turing", "Leonardo Fibonacci", "Katherine Johnson", "Annie Easley
 # A2c:
 fname_letters: list[str] = []
 for name in names:
-    spc = name.index(" ")+1
-    fname_letters.append(name[:1] + " " + name[spc:spc+1])
+    spc = name.index(" ") + 1
+    fname_letters.append(name[:1] + " " + name[spc:spc + 1])
 print(fname_letters)
 
 # -------------------------------------------------------------------------------------- #
@@ -101,19 +101,22 @@ print("\nQ4b\n")
 # Q4b: Continue this code and print "prime" if the number is a prime number and "not prime" otherwise
 
 # A4b:
-while True:
-    i1 = input("Input a number greater than 100: ")
-    if i1.isdigit() and int(i1) > 100:
-        if (int(i1) % 2 != 0 and int(i1) != 2)\
-            and (int(i1) % 3 != 0 and int(i1) != 3)\
-            and (int(i1) % 4 != 0 and int(i1) != 4)\
-            and (int(i1) % 5 != 0 and int(i1) != 5)\
-            and (int(i1) % 6 != 0 and int(i1) != 6)\
-            and (int(i1) % 7 != 0 and int(i1) != 7)\
-            and (int(i1) % 8 != 0 and int(i1) != 8)\
-            and (int(i1) % 9 != 0 and int(i1) != 9):
-            print("prime")
-        else:
-            print("not prime")
-    else:
-        print("Invalid input, try again..")
+# while True:
+#     i1 = input("Input a number greater than 100: ")
+#     if i1.isdigit() and int(i1) > 100:
+#         i1 = int(i1)
+#         if (i1 % 2 != 0 and i1 != 2) \
+#                 and (i1 % 3 != 0 and i1 != 3) \
+#                 and (i1 % 4 != 0 and i1 != 4) \
+#                 and (i1 % 5 != 0 and i1 != 5) \
+#                 and (i1 % 6 != 0 and i1 != 6) \
+#                 and (i1 % 7 != 0 and i1 != 7) \
+#                 and (i1 % 8 != 0 and i1 != 8) \
+#                 and (i1 % 9 != 0 and i1 != 9):
+#             print("prime")
+#         else:
+#             print("not prime")
+#     else:
+#         print("Invalid input, try again..")
+
+#THIS IS WRONG ^ (see functions_ex for correct)

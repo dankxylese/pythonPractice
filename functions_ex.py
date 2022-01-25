@@ -92,17 +92,15 @@ print("\nQ3a\n")
 
 # A3a:
 def prime_finder_helper(number: int):
-    if (number % 2 != 0 and number != 2) \
-            and (number % 3 != 0 and number != 3) \
-            and (number % 4 != 0 and number != 4) \
-            and (number % 5 != 0 and number != 5) \
-            and (number % 6 != 0 and number != 6) \
-            and (number % 7 != 0 and number != 7) \
-            and (number % 8 != 0 and number != 8) \
-            and (number % 9 != 0 and number != 9):
-        return True
-    else:
+    flag_not_prime = False
+    for i in range(2, number):
+        if number % i == 0 or number == i:
+            flag_not_prime = True
+
+    if flag_not_prime:
         return False
+    else:
+        return True
 
 
 print("\nQ3b\n")
@@ -113,7 +111,7 @@ print("\nQ3b\n")
 # A3b:
 def prime_finder(user_input):  # can be int or str
     if str(user_input).isdigit():
-        if prime_finder_helper(int(user_input)):
+        if prime_finder_helper1(int(user_input)):
             return True
         else:
             return False
@@ -123,8 +121,9 @@ def prime_finder(user_input):  # can be int or str
 
 print(prime_finder("thing"))
 print(prime_finder(102))
+print(prime_finder(121))
+print(prime_finder(102))
 print(prime_finder(103))
 print(prime_finder("103"))
-
 
 # -------------------------------------------------------------------------------------- #
