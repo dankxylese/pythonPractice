@@ -91,7 +91,8 @@ for num in range(rLow, rHigh + 1):
     if num % 3 == 0 and num % 5 == 0:  # fizz and buzz
         if addNew and num % newDivisor == 0:  # fizz, buzz and new word
             print("(" + str(num) + ")" + fizz + buzz + newWord)
-            continue  # skip to the end of the for loop
+            continue  # skip to the end of the for loop, otherwise it will print the line under
+            # do this to avoid more if checks
         print("(" + str(num) + ")" + fizz + buzz)
     elif num % 3 == 0:  # fizz
         if addNew and num % newDivisor == 0:  # fizz and new word
