@@ -7,7 +7,7 @@ print("\nQ1a\n")
 
 # A1a:
 def find_divisors(num):
-    temp_list = list()
+    temp_list = []
     for i in range(1, num):
         if num % i == 0:
             temp_list.append(i)
