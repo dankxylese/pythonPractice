@@ -19,11 +19,11 @@ def test_rectangle_area():
     assert rect.get_area() == 12
 
 def test_squares_in_square():
-    square = Square(3)
+    square = Square(4)
     square2 = Square(6)
-    assert square.get_number_enclosing(square2) == 4
+    assert square.get_number_enclosing(square2) == 0
 
 def test_squares_in_square_other_way_around():
     square = Square(6)
-    square2 = Square(3)
-    assert square.get_number_enclosing(square2) == 4
+    square2 = Square(4)
+    assert square.get_number_enclosing(square2) == 1

@@ -19,6 +19,7 @@ the current square
 Both classes should have appropriate repr and str
 """
 
+import math
 
 class Square:
     def __init__(self, side):
@@ -37,10 +38,10 @@ class Square:
         return self.side**2
 
     def get_number_enclosing(self, square):
-        if square.get_area() > self.get_area():
-            return square.get_area() / self.get_area()
+        if self.side >= square.side:
+            return int(math.floor(self.side / square.side))
         else:
-            return self.get_area() / square.get_area()
+            return 0
 
 
 class Rectangle(Square):
@@ -61,6 +62,6 @@ class Rectangle(Square):
     def get_area(self):
         return self.side * self.side2
 
-    def get_number_enclosing(self):
+    def get_number_enclosing(self, square):
         return None
 
