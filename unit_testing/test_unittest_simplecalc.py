@@ -7,7 +7,10 @@ import unittest
 # Unit Tests
 
 class CalcTests(unittest.TestCase):
-    calc = SimpleCalc()
+    def setUp(self):  # setup for things we need to use on every test separately, in case things in setup hold data
+        # in memory
+        self.calc = SimpleCalc()
+        print("Setting up")
 
     def test_add(self):
         actual = self.calc.add(2, 4)
