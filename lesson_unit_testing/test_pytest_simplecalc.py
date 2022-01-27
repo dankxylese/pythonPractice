@@ -1,5 +1,5 @@
 # Pytest
-from unit_testing.simplecalc import SimpleCalc
+from lesson_unit_testing.simplecalc import SimpleCalc
 import pytest
 
 

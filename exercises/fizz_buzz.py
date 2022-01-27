@@ -2,13 +2,45 @@
 # FizzBuzz game with changeable Fizz, Buzz, Range,
 # and even an ability to add a third word with its own divisor
 
-rLow = 1
+class GameSave():
+    def __init__(self):
+
+
+r_low = 1
 rHigh = 100
 fizz = "fizz"
 buzz = "buzz"
 addNew = False
 newWord = ""
 newDivisor = 0
+
+
+def main():
+
+    input_proc()
+    pass
+
+
+def input_proc():
+    i0 = input("Run basic version or customisable? (basic or custom): ").lower()  # i0 = input 0
+    out = input_proc_helper("Specify starting range (leave blank for 1): ", 1)
+    if out is not None:
+        r_low = out
+    pass
+
+
+def input_proc_helper(text, t, bound_check=0):
+    while True:
+        i = input(text)
+        if t == 1 and (i.isdigit() and int(i) > bound_check):  # type 1 = int
+            return int(i)
+        elif t == 2 and (i.isalpha()):  # type 2 = str
+            return i
+        else:
+            print("Invalid input, try again..")
+            return None
+        pass
+
 
 # Processing of Input
 while True:
