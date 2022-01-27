@@ -24,6 +24,12 @@ class Square:
     def __init__(self, side):
         self.side = side
 
+    def __repr__(self):
+        return f"side: {self.side}"
+
+    def __str__(self):
+        return f"Side of the square is: {self.side}"
+
     def get_perimeter(self):
         return self.side*4
 
@@ -41,6 +47,12 @@ class Rectangle(Square):
     def __init__(self, side1, side2):
         super().__init__(side1)
         self.side2 = side2
+
+    def __repr__(self):
+        return f"width: {self.side} \nlength: {self.side2}"
+
+    def __str__(self):
+        return f"Width of the rectangle is: {self.side} \nLength of the rectangle is: {self.side2}"
 
     def get_perimeter(self):
         print(self.side)
