@@ -1,4 +1,4 @@
-from simplecalc import SimpleCalc
+from unit_testing.simplecalc import SimpleCalc
 import unittest
 
 
