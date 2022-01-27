@@ -21,6 +21,7 @@ Both classes should have appropriate repr and str
 
 import math
 
+
 class Square:
     def __init__(self, side):
         self.side = side
@@ -32,10 +33,10 @@ class Square:
         return f"Side of the square is: {self.side}"
 
     def get_perimeter(self):
-        return self.side*4
+        return self.side * 4
 
     def get_area(self):
-        return self.side**2
+        return self.side ** 2
 
     def get_number_enclosing(self, square):
         if self.side >= square.side:
@@ -57,11 +58,10 @@ class Rectangle(Square):
 
     def get_perimeter(self):
         print(self.side)
-        return (self.side*2)+(self.side2*2)
+        return (self.side * 2) + (self.side2 * 2)
 
     def get_area(self):
         return self.side * self.side2
 
     def get_number_enclosing(self, square):
         return None
-
